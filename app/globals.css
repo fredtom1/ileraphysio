@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --clinic-paper: #f7f4ee;
+  --clinic-ink: #18221f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--clinic-paper);
+  color: var(--clinic-ink);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #dce9cf;
+  color: #18221f;
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(24, 34, 31, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 34, 31, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.panel {
+  border: 1px solid rgba(24, 34, 31, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 50px rgba(24, 34, 31, 0.08);
+}
