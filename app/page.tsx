@@ -1,66 +1,77 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, CalendarDays, CreditCard, FileText, Video } from "lucide-react";
+import { ArrowRight, BadgeCheck, CalendarDays, CreditCard, FileText, ShieldCheck, Video } from "lucide-react";
 import { clinicians, researchSources, specialties } from "@/lib/data";
 import { formatNaira } from "@/lib/utils";
 
 export default function HomePage() {
   return (
     <main>
-      <section className="soft-grid">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-20">
+      <section className="hero-wash border-b border-line">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:py-24">
           <div>
-            <p className="mb-4 inline-flex rounded-full border border-palm/20 bg-white px-4 py-2 text-sm font-semibold text-palm">
-              Specialist physiotherapy, wherever you are in Nigeria
+            <p className="inline-flex items-center gap-2 rounded-full border border-palm/25 bg-surface px-3.5 py-1.5 text-[13px] font-medium text-palm-strong shadow-soft">
+              <span className="grid h-4 w-4 place-items-center rounded-full bg-palm text-white">
+                <ShieldCheck className="h-2.5 w-2.5" aria-hidden="true" />
+              </span>
+              Verified specialists · Nigeria &amp; the diaspora
             </p>
-            <h1 className="max-w-3xl font-serif text-5xl font-bold leading-[1.02] text-ink md:text-6xl">
-              Book the right physiotherapist without a hospital visit.
+            <h1 className="mt-5 max-w-3xl font-serif text-[2.75rem] font-semibold leading-[1.04] text-ink md:text-6xl">
+              Book the right physiotherapist <span className="text-palm">without a hospital visit.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/75">
-              Find a verified specialist, complete safety screening, pay in Naira, join a video consultation, and leave with
-              a clear home plan.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
+              Find a verified specialist, complete safety screening, pay in Naira, join a video consultation, and leave
+              with a clear home plan.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/book"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-palm px-5 text-sm font-bold text-white transition hover:bg-ink"
+                className="inline-flex h-12 items-center gap-2 rounded-lg bg-palm px-6 text-[15px] font-semibold text-white shadow-soft transition hover:bg-palm-strong active:translate-y-px"
               >
                 Start booking <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link
                 href="/trust-safety"
-                className="inline-flex h-12 items-center rounded-full border border-ink/15 px-5 text-sm font-bold text-ink transition hover:border-palm hover:text-palm"
+                className="inline-flex h-12 items-center rounded-lg border border-line bg-surface px-6 text-[15px] font-semibold text-ink transition hover:border-ink/40"
               >
                 See safety checks
               </Link>
             </div>
-            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-sm text-ink/70">
-              <div className="panel rounded-lg p-3">
-                <p className="font-bold text-ink">4</p>
-                <p>launch specialties</p>
-              </div>
-              <div className="panel rounded-lg p-3">
-                <p className="font-bold text-ink">WAT</p>
-                <p>timezone-first</p>
-              </div>
-              <div className="panel rounded-lg p-3">
-                <p className="font-bold text-ink">NDPA</p>
-                <p>privacy model</p>
-              </div>
-            </div>
+            <dl className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+              {[
+                ["4", "launch specialties"],
+                ["WAT", "timezone-first"],
+                ["NDPA", "privacy model"]
+              ].map(([value, label]) => (
+                <div key={label} className="rounded-lg border border-line bg-surface/70 p-4">
+                  <dt className="font-serif text-2xl font-semibold text-ink">{value}</dt>
+                  <dd className="mt-1 text-sm text-muted">{label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
-          <div className="relative overflow-hidden rounded-[28px] border border-ink/10 bg-white shadow-soft">
-            <Image
-              src="/hero-virtual-physio.png"
-              alt="Patient following a virtual physiotherapy session at home"
-              width={1792}
-              height={1024}
-              priority
-              className="h-full min-h-[420px] w-full object-cover"
-            />
-            <div className="absolute bottom-5 left-5 right-5 rounded-lg bg-white/88 p-4 shadow-soft backdrop-blur">
-              <p className="text-sm font-bold text-ink">Next safe slot</p>
-              <p className="mt-1 text-sm text-ink/70">MSK assessment with Tomi Adebayo - Tue 18:30 WAT - {formatNaira(18000)}</p>
+          <div className="relative">
+            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-palm/5 blur-2xl" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-2xl border border-line bg-surface shadow-lift ring-1 ring-ink/5">
+              <Image
+                src="/hero-virtual-physio.png"
+                alt="Patient following a virtual physiotherapy session at home"
+                width={1792}
+                height={1024}
+                priority
+                className="h-full min-h-[400px] w-full object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl border border-line bg-surface/90 p-4 shadow-soft backdrop-blur">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-leaf text-palm-strong">
+                  <CalendarDays className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <div className="min-w-0">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-palm">Next safe slot</p>
+                  <p className="truncate text-sm text-ink">
+                    MSK with Tomi Adebayo · Tue 18:30 WAT · {formatNaira(18000)}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -69,7 +80,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Sub-specialties</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Sub-specialties</p>
             <h2 className="mt-2 font-serif text-4xl font-bold">Choose the right clinical lane.</h2>
           </div>
           <Link href="/book" className="inline-flex items-center gap-2 font-bold text-palm">
@@ -91,7 +102,7 @@ export default function HomePage() {
 
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-4">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">How it works</p>
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">How it works</p>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
             {[
               [CalendarDays, "Choose", "Select a specialty, clinician, or next available slot."],
@@ -115,7 +126,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Featured clinicians</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Featured clinicians</p>
             <h2 className="mt-2 font-serif text-4xl font-bold">Verified before they go live.</h2>
           </div>
         </div>

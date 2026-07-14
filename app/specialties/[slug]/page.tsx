@@ -21,7 +21,7 @@ export default function SpecialtyPage({ params }: { params: { slug: string } }) 
     <main>
       <section className={`${specialty.accent} py-16`}>
         <div className="mx-auto max-w-7xl px-4">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Specialty</p>
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Specialty</p>
           <h1 className="mt-3 max-w-4xl font-serif text-5xl font-bold">{specialty.name}</h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-ink/75">{specialty.summary}</p>
           <Link href="/book" className="mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-ink px-5 text-sm font-bold text-white">
@@ -45,8 +45,8 @@ export default function SpecialtyPage({ params }: { params: { slug: string } }) 
             <h3 className="font-serif text-3xl font-bold">What to expect virtually</h3>
             <p className="mt-3 text-sm leading-7 text-ink/70">{specialty.virtualFit}</p>
           </div>
-          <div className="mt-4 rounded-lg border border-clay/20 bg-[#fff8ed] p-6">
-            <AlertTriangle className="h-6 w-6 text-clay" aria-hidden="true" />
+          <div className="mt-4 rounded-lg border border-warning/25 bg-warning-tint p-6">
+            <AlertTriangle className="h-6 w-6 text-warning" aria-hidden="true" />
             <h3 className="mt-3 font-serif text-3xl font-bold">Honest caveat</h3>
             <p className="mt-3 text-sm leading-7 text-ink/70">{specialty.caveat}</p>
           </div>

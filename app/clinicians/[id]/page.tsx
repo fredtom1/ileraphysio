@@ -32,7 +32,7 @@ export default function ClinicianPage({ params }: { params: { id: string } }) {
           </Link>
         </aside>
         <section>
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">{specialty?.name}</p>
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">{specialty?.name}</p>
           <h2 className="mt-3 font-serif text-5xl font-bold">Clinical profile</h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-ink/70">{clinician.bio}</p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">

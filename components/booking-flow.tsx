@@ -52,8 +52,8 @@ export function BookingFlow() {
             </button>
           ))}
         </div>
-        <div className="mt-6 rounded-lg bg-[#fff8ed] p-4 text-sm leading-6 text-ink/75">
-          <AlertTriangle className="mb-2 h-5 w-5 text-clay" aria-hidden="true" />
+        <div className="mt-6 rounded-lg border border-warning/20 bg-warning-tint p-4 text-sm leading-6 text-ink/75">
+          <AlertTriangle className="mb-2 h-5 w-5 text-warning" aria-hidden="true" />
           The system blocks payment when urgent red flags are selected. This protects patients and clinicians.
         </div>
       </aside>
@@ -61,7 +61,7 @@ export function BookingFlow() {
       <section className="rounded-lg border border-ink/10 bg-white p-5 md:p-7">
         {step === 0 && (
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Step 1</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Step 1</p>
             <h1 className="mt-2 font-serif text-4xl font-bold">What do you need help with?</h1>
             <div className="mt-6 grid gap-3 md:grid-cols-2">
               {specialties.map((item) => (
@@ -87,7 +87,7 @@ export function BookingFlow() {
 
         {step === 1 && (
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Step 2</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Step 2</p>
             <h1 className="mt-2 font-serif text-4xl font-bold">Choose a clinician or next available.</h1>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {availableClinicians.map((item) => (
@@ -115,7 +115,7 @@ export function BookingFlow() {
 
         {step === 2 && (
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Step 3</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Step 3</p>
             <h1 className="mt-2 font-serif text-4xl font-bold">Complete intake and safety screening.</h1>
             <div className="mt-6 grid gap-5">
               {specialtySlug === "paediatric" && (
@@ -169,8 +169,8 @@ export function BookingFlow() {
               </div>
 
               {shouldTriage && (
-                <div className="rounded-lg border border-clay/30 bg-[#fff2e8] p-4 text-sm leading-6">
-                  <p className="font-bold text-clay">Booking paused for safety review</p>
+                <div className="rounded-lg border border-warning/30 bg-warning-tint p-4 text-sm leading-6">
+                  <p className="font-bold text-warning">Booking paused for safety review</p>
                   <p className="mt-1 text-ink/70">
                     These answers suggest this may not be suitable for virtual-only care. The next production step is clinician triage before payment.
                   </p>
@@ -189,7 +189,7 @@ export function BookingFlow() {
 
         {step === 3 && (
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Step 4</p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Step 4</p>
             <h1 className="mt-2 font-serif text-4xl font-bold">Review and payment.</h1>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <div className="rounded-lg border border-ink/10 p-5">

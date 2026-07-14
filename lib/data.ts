@@ -36,7 +36,7 @@ export const specialties: Specialty[] = [
     caveat: "Some children need in-person assessment for tone, reflexes, equipment fitting, or safeguarding concerns.",
     intakeFocus: ["Parent or guardian details", "Birth history", "Milestones", "School or nursery context"],
     redFlags: ["Recent unexplained injury", "Safeguarding concern", "Sudden loss of movement"],
-    accent: "bg-leaf"
+    accent: "bg-paeds-tint"
   },
   {
     slug: "vestibular",
@@ -48,7 +48,7 @@ export const specialties: Specialty[] = [
     caveat: "Sudden severe vertigo, neurological signs, new hearing loss, or fainting need urgent in-person care before booking.",
     intakeFocus: ["Dizziness triggers", "Neurological symptoms", "Hearing changes", "DHI score"],
     redFlags: ["Sudden onset vertigo", "Face or limb weakness", "New hearing loss", "Fainting"],
-    accent: "bg-lagoon"
+    accent: "bg-vest-tint"
   },
   {
     slug: "respiratory",
@@ -60,7 +60,7 @@ export const specialties: Specialty[] = [
     caveat: "Acute breathlessness, oxygen dependence changes, chest pain, or recent deterioration require triage before virtual care.",
     intakeFocus: ["Oxygen use", "Recent admission", "Breathlessness scale", "Six-minute walk self-report"],
     redFlags: ["Acute breathlessness", "Chest pain", "Oxygen saturation concern", "Recent hospitalisation"],
-    accent: "bg-[#e7efe5]"
+    accent: "bg-resp-tint"
   },
   {
     slug: "msk-orthopaedic",
@@ -72,7 +72,7 @@ export const specialties: Specialty[] = [
     caveat: "Severe trauma, progressive neurological symptoms, unexplained swelling, or suspected fracture should be seen in person.",
     intakeFocus: ["Body region", "Pain pattern", "Functional goals", "Photo or video upload"],
     redFlags: ["Suspected fracture", "Progressive weakness", "Loss of bladder control", "Unexplained swelling"],
-    accent: "bg-[#f3dfd3]"
+    accent: "bg-msk-tint"
   }
 ];
 

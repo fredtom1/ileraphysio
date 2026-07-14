@@ -3,7 +3,7 @@ import { Calendar, FileText, MessageSquare, PlayCircle } from "lucide-react";
 export default function PatientPortalPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-14">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Patient portal preview</p>
+      <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Patient portal preview</p>
       <h1 className="mt-3 font-serif text-5xl font-bold">Your care plan in one calm place.</h1>
       <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_0.8fr]">
         <section className="rounded-lg border border-ink/10 bg-white p-6 shadow-soft">
@@ -42,7 +42,7 @@ export default function PatientPortalPage() {
               </label>
             ))}
           </div>
-          <p className="mt-5 rounded-lg bg-[#fff8ed] p-4 text-sm leading-6 text-ink/70">
+          <p className="mt-5 rounded-lg bg-warning-tint p-4 text-sm leading-6 text-ink/70">
             Messaging is for follow-up questions only, not urgent symptoms.
           </p>
         </section>

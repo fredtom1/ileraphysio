@@ -5,8 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "KineticCare | Virtual Physiotherapy Clinic Nigeria",
-  description: "A Nigerian virtual physiotherapy marketplace MVP with booking, triage, clinician profiles, and portal previews."
+  title: "Ìlera Physio | Virtual Physiotherapy for Nigeria & the Diaspora",
+  description:
+    "Book a verified specialist physiotherapist, complete safety screening, pay in Naira, join a video consultation, and leave with a clear home plan."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

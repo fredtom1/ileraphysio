@@ -3,7 +3,7 @@ import { AlertTriangle, BadgeCheck, FileKey2, ShieldCheck } from "lucide-react";
 export default function TrustSafetyPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-14">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Trust and safety</p>
+      <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Trust and safety</p>
       <h1 className="mt-3 max-w-4xl font-serif text-5xl font-bold">Healthcare trust is a product feature.</h1>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {[
@@ -22,7 +22,7 @@ export default function TrustSafetyPage() {
           );
         })}
       </div>
-      <section className="mt-10 rounded-lg bg-[#fff8ed] p-6">
+      <section className="mt-10 rounded-lg bg-warning-tint p-6">
         <h2 className="font-serif text-3xl font-bold">Paediatric safeguarding pathway</h2>
         <p className="mt-3 max-w-3xl text-sm leading-7 text-ink/70">
           Clinician-facing escalation should include a documented concern form, admin notification, session note lock,

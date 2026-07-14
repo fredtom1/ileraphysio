@@ -3,7 +3,7 @@ import { CalendarClock, FileText, HandCoins, Video } from "lucide-react";
 export default function ClinicianPortalPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-14">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Clinician portal preview</p>
+      <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Clinician portal preview</p>
       <h1 className="mt-3 font-serif text-5xl font-bold">Calendar, notes, video, and earnings.</h1>
       <div className="mt-10 grid gap-4 md:grid-cols-4">
         {[

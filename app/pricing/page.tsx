@@ -6,7 +6,7 @@ import { formatNaira } from "@/lib/utils";
 export default function PricingPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-14">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-clay">Pricing</p>
+      <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-palm">Pricing</p>
       <h1 className="mt-3 max-w-3xl font-serif text-5xl font-bold">Clear Naira pricing before booking.</h1>
       <p className="mt-5 max-w-2xl text-lg leading-8 text-ink/70">
         MVP pricing is transparent and clinician fees can vary within platform bounds. Packages should be charged only after
